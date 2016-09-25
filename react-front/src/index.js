@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import CommentBox from './component/commentBox';
 import 'bulma/css/bulma.css';
 
