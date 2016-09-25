@@ -24,19 +24,25 @@ export default class CommentForm extends Component {
   render() {
     return (
       <form className="commentForm" onSubmit={ev => this.handleSubmit(ev)}>
-        <input
-          type="text"
-          placeholder="Your name"
-          value={this.state.author}
-          onChange={ev => this.handleAuthorChange(ev)}
-          />
-        <input
-          type="text"
-          placeholder="Say something..."
-          value={this.state.text}
-          onChange={ev => this.handleTextChange(ev)}
-          />
-        <input type="submit" value="Post" />
+        <p className="control">
+          <input className="input"
+            type="text"
+            placeholder="Your name"
+            value={this.state.author}
+            onChange={ev => this.handleAuthorChange(ev)}
+            />
+        </p>
+        <p className="control">
+          <input className="input"
+            type="text"
+            placeholder="Say something..."
+            value={this.state.text}
+            onChange={ev => this.handleTextChange(ev)}
+            />
+        </p>
+        <p className="control">
+          <input className="button is-primary" type="submit" value="Post" />
+        </p>
       </form>
     );
   }

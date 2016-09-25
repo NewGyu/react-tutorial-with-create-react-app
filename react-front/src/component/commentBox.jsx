@@ -6,7 +6,7 @@ import axios from 'axios';
 export default class CommentBox extends Component {
   constructor() {
     super();
-    this.state = {data: []};
+    this.state = { data: [] };
   }
   loadCommentsFromServer() {
     axios.get(this.props.url).then(res => {
@@ -38,10 +38,14 @@ export default class CommentBox extends Component {
 
   render() {
     return (
-      <div className="commentBox">
-        <h1>Comments</h1>
-        <CommentList data={this.state.data} />
-        <CommentForm onCommentSubmit={event => this.handleCommentSubmit(event)} />
+      <div>
+        <section className="section">
+          <h1 className="title">Comments</h1>
+          <CommentList data={this.state.data} />
+        </section>
+        <section className="section">
+          <CommentForm onCommentSubmit={event => this.handleCommentSubmit(event) } />
+        </section>
       </div>
     );
   }

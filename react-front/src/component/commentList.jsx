@@ -27,12 +27,18 @@ class Comment extends Component {
 
   render() {
     return (
-      <div className="comment">
-        <h2 className="commentAuthor">
-          {this.props.author}
-        </h2>
-        <span dangerouslySetInnerHTML={this.rawMarkup()} />
-      </div>
+      <article className="columns">
+        <div className="column">
+          <div className="comment card">
+            <header className="card-header">
+              <h2 className="commentAuthor card-header-title">{this.props.author}</h2>
+            </header>
+            <div className="card-content">
+              <span dangerouslySetInnerHTML={this.rawMarkup() } />
+            </div>
+          </div>
+        </div>
+      </article>
     );
   }
 }

@@ -2,9 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import CommentBox from './component/commentBox';
+import 'bulma/css/bulma.css';
 
+class App extends React.Component {
+  render() {
+    return(
+      <CommentBox url="/api/comments" pollInterval={2000} />
+    );
+  }
+}
 
 ReactDOM.render(
-  <CommentBox url="/api/comments" pollInterval={2000} />,
+  <App />,
   document.getElementById('root')
 );
