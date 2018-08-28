@@ -12,4 +12,4 @@ api:
   volumes:
   - "./express-api:/opt/api"
   ports:
-  - "3000"
+  - "5000"
